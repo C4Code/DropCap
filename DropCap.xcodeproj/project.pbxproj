@@ -23,10 +23,6 @@
 		ED58D82516BB61470070BD9C /* C4AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED58D82416BB61470070BD9C /* C4AppDelegate.m */; };
 		ED58D82716BB61470070BD9C /* C4WorkSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = ED58D82616BB61470070BD9C /* C4WorkSpace.m */; };
 		ED58D84D16BB61480070BD9C /* libC4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D84C16BB61480070BD9C /* libC4.a */; };
-		ED58D85016BB61480070BD9C /* C4Loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = ED58D84F16BB61480070BD9C /* C4Loop.aif */; };
-		ED58D85216BB61490070BD9C /* C4Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85116BB61490070BD9C /* C4Sky.png */; };
-		ED58D85416BB61490070BD9C /* C4Table.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85316BB61490070BD9C /* C4Table.png */; };
-		ED58D85616BB61490070BD9C /* inception.mov in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85516BB61490070BD9C /* inception.mov */; };
 		ED58D85916BB61490070BD9C /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85816BB61490070BD9C /* iTunesArtwork.png */; };
 		ED58D85C16BB614A0070BD9C /* C4Canvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85A16BB614A0070BD9C /* C4Canvas.xib */; };
 		ED58D85E16BB614A0070BD9C /* C4_AppIcon_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85D16BB614A0070BD9C /* C4_AppIcon_iPhone.png */; };
@@ -102,10 +98,6 @@
 		ED58D84A16BB61480070BD9C /* C4Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Window.h; path = Headers/C4Window.h; sourceTree = "<group>"; };
 		ED58D84B16BB61480070BD9C /* UITouch+C4Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UITouch+C4Touch.h"; path = "Headers/UITouch+C4Touch.h"; sourceTree = "<group>"; };
 		ED58D84C16BB61480070BD9C /* libC4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libC4.a; path = Library/libC4.a; sourceTree = "<group>"; };
-		ED58D84F16BB61480070BD9C /* C4Loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = C4Loop.aif; path = Media/C4Loop.aif; sourceTree = "<group>"; };
-		ED58D85116BB61490070BD9C /* C4Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Sky.png; path = Media/C4Sky.png; sourceTree = "<group>"; };
-		ED58D85316BB61490070BD9C /* C4Table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Table.png; path = Media/C4Table.png; sourceTree = "<group>"; };
-		ED58D85516BB61490070BD9C /* inception.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = inception.mov; path = Media/inception.mov; sourceTree = "<group>"; };
 		ED58D85816BB61490070BD9C /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Logos/iTunesArtwork.png; sourceTree = "<group>"; };
 		ED58D85B16BB614A0070BD9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/C4Canvas.xib; sourceTree = "<group>"; };
 		ED58D85D16BB614A0070BD9C /* C4_AppIcon_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_AppIcon_iPhone.png; path = Logos/C4_AppIcon_iPhone.png; sourceTree = "<group>"; };
@@ -259,10 +251,6 @@
 		ED58D84E16BB61480070BD9C /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				ED58D84F16BB61480070BD9C /* C4Loop.aif */,
-				ED58D85116BB61490070BD9C /* C4Sky.png */,
-				ED58D85316BB61490070BD9C /* C4Table.png */,
-				ED58D85516BB61490070BD9C /* inception.mov */,
 			);
 			name = Media;
 			sourceTree = "<group>";
@@ -339,10 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED58D81E16BB61470070BD9C /* InfoPlist.strings in Resources */,
-				ED58D85016BB61480070BD9C /* C4Loop.aif in Resources */,
-				ED58D85216BB61490070BD9C /* C4Sky.png in Resources */,
-				ED58D85416BB61490070BD9C /* C4Table.png in Resources */,
-				ED58D85616BB61490070BD9C /* inception.mov in Resources */,
 				ED58D85916BB61490070BD9C /* iTunesArtwork.png in Resources */,
 				ED58D85C16BB614A0070BD9C /* C4Canvas.xib in Resources */,
 				ED58D85E16BB614A0070BD9C /* C4_AppIcon_iPhone.png in Resources */,
