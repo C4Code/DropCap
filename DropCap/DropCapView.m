@@ -29,8 +29,7 @@
     _textAlignment = NSTextAlignmentJustified;
 }
 
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
     //make sure that all the variables exist and are non-nil
     NSAssert(_text != nil, @"text is nil");
     NSAssert(_textColor != nil, @"textColor is nil");
@@ -42,15 +41,15 @@
     CTTextAlignment ctTextAlignment = NSTextAlignmentToCTTextAlignment(_textAlignment);
     
     //create a paragraph style
-    CTParagraphStyleSetting paragraphStyleSettings[] = {
-        {
+    CTParagraphStyleSetting paragraphStyleSettings[] = { {
             .spec = kCTParagraphStyleSpecifierAlignment,
             .valueSize = sizeof ctTextAlignment,
             .value = &ctTextAlignment
         }
     };
     
-    CTParagraphStyleRef style = CTParagraphStyleCreate(paragraphStyleSettings, sizeof paragraphStyleSettings / sizeof *paragraphStyleSettings);
+    CFIndex settingCount = sizeof paragraphStyleSettings / sizeof *paragraphStyleSettings;
+    CTParagraphStyleRef style = CTParagraphStyleCreate(paragraphStyleSettings, settingCount);
     
     //create two fonts, with the same name but differing font sizes
     CTFontRef dropCapFontRef = CTFontCreateWithName((__bridge CFStringRef)_fontName, _dropCapFontSize, NULL);
@@ -103,37 +102,57 @@
     //get the size of the drop cap letter
     CFRange range;
     CGSize maxSizeConstraint = CGSizeMake(200.0f, 200.0f);
-    CGSize dropCapSize = CTFramesetterSuggestFrameSizeWithConstraints(dropCapSetter, CFRangeMake(0, 1), dropCapAttributes, maxSizeConstraint, &range);
+    CGSize dropCapSize = CTFramesetterSuggestFrameSizeWithConstraints(dropCapSetter,
+                                                                      CFRangeMake(0, 1),
+                                                                      dropCapAttributes,
+                                                                      maxSizeConstraint,
+                                                                      &range);
     
     //create the path that the main body of text will be drawn into
-    //i create the path based on the dropCapSize, with some adjustments to tighten things up (done by eye)
-    //to get some padding around the edges of the screen, you could go to +5 (x) and self.frame.size.width -5 (same for height)
+    //i create the path based on the dropCapSize
+    //adjusting to tighten things up (e.g. the *0.8,done by eye)
+    //to get some padding around the edges of the screen
+    //you could go to +5 (x) and self.frame.size.width -5 (same for height)
     CGMutablePathRef textBox = CGPathCreateMutable();
     CGPathMoveToPoint(textBox, nil, dropCapSize.width, 0);
-    CGPathAddLineToPoint(textBox, nil, dropCapSize.width, dropCapSize.height * 0.8); //adjustment because the dropCapSize is tall
+    CGPathAddLineToPoint(textBox, nil, dropCapSize.width, dropCapSize.height * 0.8); 
     CGPathAddLineToPoint(textBox, nil, 0, dropCapSize.height * 0.8);
     CGPathAddLineToPoint(textBox, nil, 0, self.frame.size.height);
     CGPathAddLineToPoint(textBox, nil, self.frame.size.width, self.frame.size.height);
     CGPathAddLineToPoint(textBox, nil, self.frame.size.width, 0);
     CGPathCloseSubpath(textBox);
     
-    //create a transform which will flip the CGContext into the same coordinate orientation as the UIView
+    //create a transform which will flip the CGContext into the same orientation as the UIView
     CGAffineTransform flipTransform = CGAffineTransformIdentity;
-    flipTransform = CGAffineTransformTranslate(flipTransform, 0, self.bounds.size.height);
+    flipTransform = CGAffineTransformTranslate(flipTransform,
+                                               0,
+                                               self.bounds.size.height);
     flipTransform = CGAffineTransformScale(flipTransform, 1, -1);
     
     //invert the path for the text box
-    CGPathRef invertedTextBox = CGPathCreateCopyByTransformingPath(textBox, &flipTransform);
+    CGPathRef invertedTextBox = CGPathCreateCopyByTransformingPath(textBox,
+                                                                   &flipTransform);
     CFRelease(textBox);
     
     //create the CTFrame that will hold the main body of text
-    CTFrameRef textFrame = CTFramesetterCreateFrame(textSetter, CFRangeMake(0, 0), invertedTextBox, NULL);
+    CTFrameRef textFrame = CTFramesetterCreateFrame(textSetter,
+                                                    CFRangeMake(0, 0),
+                                                    invertedTextBox,
+                                                    NULL);
     CFRelease(invertedTextBox);
     CFRelease(textSetter);
     
-    //create the drop cap text box, inverted already because we don't have to create an independent cgpathref (like above)
-    CGPathRef dropCapTextBox = CGPathCreateWithRect(CGRectMake(_dropCapKernValue/2.0f, 0, dropCapSize.width, dropCapSize.height), &flipTransform);
-    CTFrameRef dropCapFrame = CTFramesetterCreateFrame(dropCapSetter, CFRangeMake(0, 0), dropCapTextBox, NULL);
+    //create the drop cap text box
+    //it is inverted already because we don't have to create an independent cgpathref (like above)
+    CGPathRef dropCapTextBox = CGPathCreateWithRect(CGRectMake(_dropCapKernValue/2.0f,
+                                                               0,
+                                                               dropCapSize.width,
+                                                               dropCapSize.height),
+                                                    &flipTransform);
+    CTFrameRef dropCapFrame = CTFramesetterCreateFrame(dropCapSetter,
+                                                       CFRangeMake(0, 0),
+                                                       dropCapTextBox,
+                                                       NULL);
     CFRelease(dropCapTextBox);
     CFRelease(dropCapSetter);
     
@@ -149,7 +168,6 @@
 }
 
 #pragma mark SETTERS
-
 //All of these have [self setNeedsDisplay] to force redrawing when they render
 -(void)setText:(NSString *)text {
     _text = [text copy];
