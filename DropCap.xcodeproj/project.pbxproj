@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED58D80416BB61470070BD9C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80316BB61470070BD9C /* Accelerate.framework */; };
+		ED58D80616BB61470070BD9C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80516BB61470070BD9C /* AVFoundation.framework */; };
+		ED58D80816BB61470070BD9C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80716BB61470070BD9C /* CoreFoundation.framework */; };
+		ED58D80A16BB61470070BD9C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80916BB61470070BD9C /* CoreGraphics.framework */; };
+		ED58D80C16BB61470070BD9C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80B16BB61470070BD9C /* CoreImage.framework */; };
+		ED58D80E16BB61470070BD9C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80D16BB61470070BD9C /* CoreMedia.framework */; };
+		ED58D81016BB61470070BD9C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D80F16BB61470070BD9C /* CoreText.framework */; };
+		ED58D81216BB61470070BD9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D81116BB61470070BD9C /* Foundation.framework */; };
+		ED58D81416BB61470070BD9C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D81316BB61470070BD9C /* OpenGLES.framework */; };
+		ED58D81616BB61470070BD9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D81516BB61470070BD9C /* QuartzCore.framework */; };
+		ED58D81816BB61470070BD9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D81716BB61470070BD9C /* UIKit.framework */; };
+		ED58D81E16BB61470070BD9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED58D81C16BB61470070BD9C /* InfoPlist.strings */; };
+		ED58D82016BB61470070BD9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED58D81F16BB61470070BD9C /* main.m */; };
+		ED58D82516BB61470070BD9C /* C4AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED58D82416BB61470070BD9C /* C4AppDelegate.m */; };
+		ED58D82716BB61470070BD9C /* C4WorkSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = ED58D82616BB61470070BD9C /* C4WorkSpace.m */; };
+		ED58D84D16BB61480070BD9C /* libC4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED58D84C16BB61480070BD9C /* libC4.a */; };
+		ED58D85016BB61480070BD9C /* C4Loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = ED58D84F16BB61480070BD9C /* C4Loop.aif */; };
+		ED58D85216BB61490070BD9C /* C4Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85116BB61490070BD9C /* C4Sky.png */; };
+		ED58D85416BB61490070BD9C /* C4Table.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85316BB61490070BD9C /* C4Table.png */; };
+		ED58D85616BB61490070BD9C /* inception.mov in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85516BB61490070BD9C /* inception.mov */; };
+		ED58D85916BB61490070BD9C /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85816BB61490070BD9C /* iTunesArtwork.png */; };
+		ED58D85C16BB614A0070BD9C /* C4Canvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85A16BB614A0070BD9C /* C4Canvas.xib */; };
+		ED58D85E16BB614A0070BD9C /* C4_AppIcon_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85D16BB614A0070BD9C /* C4_AppIcon_iPhone.png */; };
+		ED58D86016BB614A0070BD9C /* C4_AppIcon_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D85F16BB614A0070BD9C /* C4_AppIcon_iPhone@2x.png */; };
+		ED58D86216BB614A0070BD9C /* C4_AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86116BB614A0070BD9C /* C4_AppStoreIcon.png */; };
+		ED58D86416BB614A0070BD9C /* C4_AppStoreIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86316BB614A0070BD9C /* C4_AppStoreIcon@2x.png */; };
+		ED58D86616BB614A0070BD9C /* C4_LaunchImage_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86516BB614A0070BD9C /* C4_LaunchImage_iPhone.png */; };
+		ED58D86816BB614A0070BD9C /* C4_LaunchImage_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86716BB614A0070BD9C /* C4_LaunchImage_iPhone@2x.png */; };
+		ED58D86A16BB614A0070BD9C /* C4_SpotlightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86916BB614A0070BD9C /* C4_SpotlightIcon.png */; };
+		ED58D86C16BB614A0070BD9C /* C4_SpotlightIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86B16BB614A0070BD9C /* C4_SpotlightIcon@2x.png */; };
+		ED58D86E16BB614A0070BD9C /* C4_TabbarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86D16BB614A0070BD9C /* C4_TabbarIcon.png */; };
+		ED58D87016BB614A0070BD9C /* C4_TabbarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D86F16BB614A0070BD9C /* C4_TabbarIcon@2x.png */; };
+		ED58D87216BB614A0070BD9C /* C4_ToolbarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D87116BB614A0070BD9C /* C4_ToolbarIcon.png */; };
+		ED58D87416BB614A0070BD9C /* C4_ToolbarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED58D87316BB614A0070BD9C /* C4_ToolbarIcon@2x.png */; };
+		ED80831C16BB651E0062CA38 /* DropCapView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80831B16BB651E0062CA38 /* DropCapView.m */; };
+		ED8834C816BB778400E915FB /* C4_LaunchImage_iPhone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8834C716BB778400E915FB /* C4_LaunchImage_iPhone-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED58D7FF16BB61470070BD9C /* DropCap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED58D80316BB61470070BD9C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		ED58D80516BB61470070BD9C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ED58D80716BB61470070BD9C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		ED58D80916BB61470070BD9C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED58D80B16BB61470070BD9C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		ED58D80D16BB61470070BD9C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		ED58D80F16BB61470070BD9C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		ED58D81116BB61470070BD9C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED58D81316BB61470070BD9C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		ED58D81516BB61470070BD9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ED58D81716BB61470070BD9C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED58D81B16BB61470070BD9C /* DropCap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropCap-Info.plist"; sourceTree = "<group>"; };
+		ED58D81D16BB61470070BD9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED58D81F16BB61470070BD9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED58D82116BB61470070BD9C /* DropCap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropCap-Prefix.pch"; sourceTree = "<group>"; };
+		ED58D82216BB61470070BD9C /* C4WorkSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C4WorkSpace.h; sourceTree = "<group>"; };
+		ED58D82316BB61470070BD9C /* C4AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C4AppDelegate.h; sourceTree = "<group>"; };
+		ED58D82416BB61470070BD9C /* C4AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C4AppDelegate.m; sourceTree = "<group>"; };
+		ED58D82616BB61470070BD9C /* C4WorkSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C4WorkSpace.m; sourceTree = "<group>"; };
+		ED58D82916BB61470070BD9C /* C4AddSubview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4AddSubview.h; path = Headers/C4AddSubview.h; sourceTree = "<group>"; };
+		ED58D82A16BB61470070BD9C /* C4AssertionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4AssertionHandler.h; path = Headers/C4AssertionHandler.h; sourceTree = "<group>"; };
+		ED58D82B16BB61470070BD9C /* C4Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Camera.h; path = Headers/C4Camera.h; sourceTree = "<group>"; };
+		ED58D82C16BB61470070BD9C /* C4CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4CameraController.h; path = Headers/C4CameraController.h; sourceTree = "<group>"; };
+		ED58D82D16BB61470070BD9C /* C4CanvasController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4CanvasController.h; path = Headers/C4CanvasController.h; sourceTree = "<group>"; };
+		ED58D82E16BB61470070BD9C /* C4CaptureVideoPreviewLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4CaptureVideoPreviewLayer.h; path = Headers/C4CaptureVideoPreviewLayer.h; sourceTree = "<group>"; };
+		ED58D82F16BB61470070BD9C /* C4Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Control.h; path = Headers/C4Control.h; sourceTree = "<group>"; };
+		ED58D83016BB61470070BD9C /* C4Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Defines.h; path = Headers/C4Defines.h; sourceTree = "<group>"; };
+		ED58D83116BB61470070BD9C /* C4EAGLES1Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4EAGLES1Renderer.h; path = Headers/C4EAGLES1Renderer.h; sourceTree = "<group>"; };
+		ED58D83216BB61470070BD9C /* C4EAGLESRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4EAGLESRenderer.h; path = Headers/C4EAGLESRenderer.h; sourceTree = "<group>"; };
+		ED58D83316BB61470070BD9C /* C4EAGLLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4EAGLLayer.h; path = Headers/C4EAGLLayer.h; sourceTree = "<group>"; };
+		ED58D83416BB61470070BD9C /* C4Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Font.h; path = Headers/C4Font.h; sourceTree = "<group>"; };
+		ED58D83516BB61470070BD9C /* C4Foundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Foundation.h; path = Headers/C4Foundation.h; sourceTree = "<group>"; };
+		ED58D83616BB61470070BD9C /* C4Gesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Gesture.h; path = Headers/C4Gesture.h; sourceTree = "<group>"; };
+		ED58D83716BB61470070BD9C /* C4GL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4GL.h; path = Headers/C4GL.h; sourceTree = "<group>"; };
+		ED58D83816BB61480070BD9C /* C4GL1Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4GL1Renderer.h; path = Headers/C4GL1Renderer.h; sourceTree = "<group>"; };
+		ED58D83916BB61480070BD9C /* C4Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Image.h; path = Headers/C4Image.h; sourceTree = "<group>"; };
+		ED58D83A16BB61480070BD9C /* C4Label.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Label.h; path = Headers/C4Label.h; sourceTree = "<group>"; };
+		ED58D83B16BB61480070BD9C /* C4Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Layer.h; path = Headers/C4Layer.h; sourceTree = "<group>"; };
+		ED58D83C16BB61480070BD9C /* C4LayerAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4LayerAnimation.h; path = Headers/C4LayerAnimation.h; sourceTree = "<group>"; };
+		ED58D83D16BB61480070BD9C /* C4Math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Math.h; path = Headers/C4Math.h; sourceTree = "<group>"; };
+		ED58D83E16BB61480070BD9C /* C4MethodDelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4MethodDelay.h; path = Headers/C4MethodDelay.h; sourceTree = "<group>"; };
+		ED58D83F16BB61480070BD9C /* C4Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Movie.h; path = Headers/C4Movie.h; sourceTree = "<group>"; };
+		ED58D84016BB61480070BD9C /* C4Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Notification.h; path = Headers/C4Notification.h; sourceTree = "<group>"; };
+		ED58D84116BB61480070BD9C /* C4Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Object.h; path = Headers/C4Object.h; sourceTree = "<group>"; };
+		ED58D84216BB61480070BD9C /* C4PlayerLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4PlayerLayer.h; path = Headers/C4PlayerLayer.h; sourceTree = "<group>"; };
+		ED58D84316BB61480070BD9C /* C4Sample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Sample.h; path = Headers/C4Sample.h; sourceTree = "<group>"; };
+		ED58D84416BB61480070BD9C /* C4Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Shape.h; path = Headers/C4Shape.h; sourceTree = "<group>"; };
+		ED58D84516BB61480070BD9C /* C4ShapeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4ShapeLayer.h; path = Headers/C4ShapeLayer.h; sourceTree = "<group>"; };
+		ED58D84616BB61480070BD9C /* C4Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Timer.h; path = Headers/C4Timer.h; sourceTree = "<group>"; };
+		ED58D84716BB61480070BD9C /* C4Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Vector.h; path = Headers/C4Vector.h; sourceTree = "<group>"; };
+		ED58D84816BB61480070BD9C /* C4View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4View.h; path = Headers/C4View.h; sourceTree = "<group>"; };
+		ED58D84916BB61480070BD9C /* C4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4ViewController.h; path = Headers/C4ViewController.h; sourceTree = "<group>"; };
+		ED58D84A16BB61480070BD9C /* C4Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = C4Window.h; path = Headers/C4Window.h; sourceTree = "<group>"; };
+		ED58D84B16BB61480070BD9C /* UITouch+C4Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UITouch+C4Touch.h"; path = "Headers/UITouch+C4Touch.h"; sourceTree = "<group>"; };
+		ED58D84C16BB61480070BD9C /* libC4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libC4.a; path = Library/libC4.a; sourceTree = "<group>"; };
+		ED58D84F16BB61480070BD9C /* C4Loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = C4Loop.aif; path = Media/C4Loop.aif; sourceTree = "<group>"; };
+		ED58D85116BB61490070BD9C /* C4Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Sky.png; path = Media/C4Sky.png; sourceTree = "<group>"; };
+		ED58D85316BB61490070BD9C /* C4Table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Table.png; path = Media/C4Table.png; sourceTree = "<group>"; };
+		ED58D85516BB61490070BD9C /* inception.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = inception.mov; path = Media/inception.mov; sourceTree = "<group>"; };
+		ED58D85816BB61490070BD9C /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Logos/iTunesArtwork.png; sourceTree = "<group>"; };
+		ED58D85B16BB614A0070BD9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/C4Canvas.xib; sourceTree = "<group>"; };
+		ED58D85D16BB614A0070BD9C /* C4_AppIcon_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_AppIcon_iPhone.png; path = Logos/C4_AppIcon_iPhone.png; sourceTree = "<group>"; };
+		ED58D85F16BB614A0070BD9C /* C4_AppIcon_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4_AppIcon_iPhone@2x.png"; path = "Logos/C4_AppIcon_iPhone@2x.png"; sourceTree = "<group>"; };
+		ED58D86116BB614A0070BD9C /* C4_AppStoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_AppStoreIcon.png; path = Logos/C4_AppStoreIcon.png; sourceTree = "<group>"; };
+		ED58D86316BB614A0070BD9C /* C4_AppStoreIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4_AppStoreIcon@2x.png"; path = "Logos/C4_AppStoreIcon@2x.png"; sourceTree = "<group>"; };
+		ED58D86516BB614A0070BD9C /* C4_LaunchImage_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_LaunchImage_iPhone.png; path = Logos/C4_LaunchImage_iPhone.png; sourceTree = "<group>"; };
+		ED58D86716BB614A0070BD9C /* C4_LaunchImage_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4_LaunchImage_iPhone@2x.png"; path = "Logos/C4_LaunchImage_iPhone@2x.png"; sourceTree = "<group>"; };
+		ED58D86916BB614A0070BD9C /* C4_SpotlightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_SpotlightIcon.png; path = Logos/C4_SpotlightIcon.png; sourceTree = "<group>"; };
+		ED58D86B16BB614A0070BD9C /* C4_SpotlightIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4_SpotlightIcon@2x.png"; path = "Logos/C4_SpotlightIcon@2x.png"; sourceTree = "<group>"; };
+		ED58D86D16BB614A0070BD9C /* C4_TabbarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_TabbarIcon.png; path = Logos/C4_TabbarIcon.png; sourceTree = "<group>"; };
+		ED58D86F16BB614A0070BD9C /* C4_TabbarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4_TabbarIcon@2x.png"; path = "Logos/C4_TabbarIcon@2x.png"; sourceTree = "<group>"; };
+		ED58D87116BB614A0070BD9C /* C4_ToolbarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4_ToolbarIcon.png; path = Logos/C4_ToolbarIcon.png; sourceTree = "<group>"; };
+		ED58D87316BB614A0070BD9C /* C4_ToolbarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4_ToolbarIcon@2x.png"; path = "Logos/C4_ToolbarIcon@2x.png"; sourceTree = "<group>"; };
+		ED80831A16BB651E0062CA38 /* DropCapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropCapView.h; sourceTree = "<group>"; };
+		ED80831B16BB651E0062CA38 /* DropCapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropCapView.m; sourceTree = "<group>"; };
+		ED8834C716BB778400E915FB /* C4_LaunchImage_iPhone-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C4_LaunchImage_iPhone-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED58D7FC16BB61470070BD9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED58D80416BB61470070BD9C /* Accelerate.framework in Frameworks */,
+				ED58D80616BB61470070BD9C /* AVFoundation.framework in Frameworks */,
+				ED58D80816BB61470070BD9C /* CoreFoundation.framework in Frameworks */,
+				ED58D80A16BB61470070BD9C /* CoreGraphics.framework in Frameworks */,
+				ED58D80C16BB61470070BD9C /* CoreImage.framework in Frameworks */,
+				ED58D80E16BB61470070BD9C /* CoreMedia.framework in Frameworks */,
+				ED58D81016BB61470070BD9C /* CoreText.framework in Frameworks */,
+				ED58D81216BB61470070BD9C /* Foundation.framework in Frameworks */,
+				ED58D81416BB61470070BD9C /* OpenGLES.framework in Frameworks */,
+				ED58D81616BB61470070BD9C /* QuartzCore.framework in Frameworks */,
+				ED58D81816BB61470070BD9C /* UIKit.framework in Frameworks */,
+				ED58D84D16BB61480070BD9C /* libC4.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED58D7F416BB61470070BD9C = {
+			isa = PBXGroup;
+			children = (
+				ED8834C716BB778400E915FB /* C4_LaunchImage_iPhone-568h@2x.png */,
+				ED58D81916BB61470070BD9C /* DropCap */,
+				ED58D80216BB61470070BD9C /* Frameworks */,
+				ED58D80016BB61470070BD9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED58D80016BB61470070BD9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D7FF16BB61470070BD9C /* DropCap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED58D80216BB61470070BD9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D80316BB61470070BD9C /* Accelerate.framework */,
+				ED58D80516BB61470070BD9C /* AVFoundation.framework */,
+				ED58D80716BB61470070BD9C /* CoreFoundation.framework */,
+				ED58D80916BB61470070BD9C /* CoreGraphics.framework */,
+				ED58D80B16BB61470070BD9C /* CoreImage.framework */,
+				ED58D80D16BB61470070BD9C /* CoreMedia.framework */,
+				ED58D80F16BB61470070BD9C /* CoreText.framework */,
+				ED58D81116BB61470070BD9C /* Foundation.framework */,
+				ED58D81316BB61470070BD9C /* OpenGLES.framework */,
+				ED58D81516BB61470070BD9C /* QuartzCore.framework */,
+				ED58D81716BB61470070BD9C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED58D81916BB61470070BD9C /* DropCap */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D82616BB61470070BD9C /* C4WorkSpace.m */,
+				ED80831A16BB651E0062CA38 /* DropCapView.h */,
+				ED80831B16BB651E0062CA38 /* DropCapView.m */,
+				ED58D82816BB61470070BD9C /* Framework */,
+				ED58D84E16BB61480070BD9C /* Media */,
+				ED58D85716BB61490070BD9C /* Logos */,
+				ED58D81A16BB61470070BD9C /* Supporting Files */,
+			);
+			path = DropCap;
+			sourceTree = "<group>";
+		};
+		ED58D81A16BB61470070BD9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D81B16BB61470070BD9C /* DropCap-Info.plist */,
+				ED58D81C16BB61470070BD9C /* InfoPlist.strings */,
+				ED58D81F16BB61470070BD9C /* main.m */,
+				ED58D82116BB61470070BD9C /* DropCap-Prefix.pch */,
+				ED58D82216BB61470070BD9C /* C4WorkSpace.h */,
+				ED58D82316BB61470070BD9C /* C4AppDelegate.h */,
+				ED58D82416BB61470070BD9C /* C4AppDelegate.m */,
+				ED58D85A16BB614A0070BD9C /* C4Canvas.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED58D82816BB61470070BD9C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D82916BB61470070BD9C /* C4AddSubview.h */,
+				ED58D82A16BB61470070BD9C /* C4AssertionHandler.h */,
+				ED58D82B16BB61470070BD9C /* C4Camera.h */,
+				ED58D82C16BB61470070BD9C /* C4CameraController.h */,
+				ED58D82D16BB61470070BD9C /* C4CanvasController.h */,
+				ED58D82E16BB61470070BD9C /* C4CaptureVideoPreviewLayer.h */,
+				ED58D82F16BB61470070BD9C /* C4Control.h */,
+				ED58D83016BB61470070BD9C /* C4Defines.h */,
+				ED58D83116BB61470070BD9C /* C4EAGLES1Renderer.h */,
+				ED58D83216BB61470070BD9C /* C4EAGLESRenderer.h */,
+				ED58D83316BB61470070BD9C /* C4EAGLLayer.h */,
+				ED58D83416BB61470070BD9C /* C4Font.h */,
+				ED58D83516BB61470070BD9C /* C4Foundation.h */,
+				ED58D83616BB61470070BD9C /* C4Gesture.h */,
+				ED58D83716BB61470070BD9C /* C4GL.h */,
+				ED58D83816BB61480070BD9C /* C4GL1Renderer.h */,
+				ED58D83916BB61480070BD9C /* C4Image.h */,
+				ED58D83A16BB61480070BD9C /* C4Label.h */,
+				ED58D83B16BB61480070BD9C /* C4Layer.h */,
+				ED58D83C16BB61480070BD9C /* C4LayerAnimation.h */,
+				ED58D83D16BB61480070BD9C /* C4Math.h */,
+				ED58D83E16BB61480070BD9C /* C4MethodDelay.h */,
+				ED58D83F16BB61480070BD9C /* C4Movie.h */,
+				ED58D84016BB61480070BD9C /* C4Notification.h */,
+				ED58D84116BB61480070BD9C /* C4Object.h */,
+				ED58D84216BB61480070BD9C /* C4PlayerLayer.h */,
+				ED58D84316BB61480070BD9C /* C4Sample.h */,
+				ED58D84416BB61480070BD9C /* C4Shape.h */,
+				ED58D84516BB61480070BD9C /* C4ShapeLayer.h */,
+				ED58D84616BB61480070BD9C /* C4Timer.h */,
+				ED58D84716BB61480070BD9C /* C4Vector.h */,
+				ED58D84816BB61480070BD9C /* C4View.h */,
+				ED58D84916BB61480070BD9C /* C4ViewController.h */,
+				ED58D84A16BB61480070BD9C /* C4Window.h */,
+				ED58D84B16BB61480070BD9C /* UITouch+C4Touch.h */,
+				ED58D84C16BB61480070BD9C /* libC4.a */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		ED58D84E16BB61480070BD9C /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D84F16BB61480070BD9C /* C4Loop.aif */,
+				ED58D85116BB61490070BD9C /* C4Sky.png */,
+				ED58D85316BB61490070BD9C /* C4Table.png */,
+				ED58D85516BB61490070BD9C /* inception.mov */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		ED58D85716BB61490070BD9C /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				ED58D85816BB61490070BD9C /* iTunesArtwork.png */,
+				ED58D85D16BB614A0070BD9C /* C4_AppIcon_iPhone.png */,
+				ED58D85F16BB614A0070BD9C /* C4_AppIcon_iPhone@2x.png */,
+				ED58D86116BB614A0070BD9C /* C4_AppStoreIcon.png */,
+				ED58D86316BB614A0070BD9C /* C4_AppStoreIcon@2x.png */,
+				ED58D86516BB614A0070BD9C /* C4_LaunchImage_iPhone.png */,
+				ED58D86716BB614A0070BD9C /* C4_LaunchImage_iPhone@2x.png */,
+				ED58D86916BB614A0070BD9C /* C4_SpotlightIcon.png */,
+				ED58D86B16BB614A0070BD9C /* C4_SpotlightIcon@2x.png */,
+				ED58D86D16BB614A0070BD9C /* C4_TabbarIcon.png */,
+				ED58D86F16BB614A0070BD9C /* C4_TabbarIcon@2x.png */,
+				ED58D87116BB614A0070BD9C /* C4_ToolbarIcon.png */,
+				ED58D87316BB614A0070BD9C /* C4_ToolbarIcon@2x.png */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED58D7FE16BB61470070BD9C /* DropCap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED58D87716BB614A0070BD9C /* Build configuration list for PBXNativeTarget "DropCap" */;
+			buildPhases = (
+				ED58D7FB16BB61470070BD9C /* Sources */,
+				ED58D7FC16BB61470070BD9C /* Frameworks */,
+				ED58D7FD16BB61470070BD9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropCap;
+			productName = DropCap;
+			productReference = ED58D7FF16BB61470070BD9C /* DropCap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED58D7F616BB61470070BD9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = moi;
+			};
+			buildConfigurationList = ED58D7F916BB61470070BD9C /* Build configuration list for PBXProject "DropCap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED58D7F416BB61470070BD9C;
+			productRefGroup = ED58D80016BB61470070BD9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED58D7FE16BB61470070BD9C /* DropCap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED58D7FD16BB61470070BD9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED58D81E16BB61470070BD9C /* InfoPlist.strings in Resources */,
+				ED58D85016BB61480070BD9C /* C4Loop.aif in Resources */,
+				ED58D85216BB61490070BD9C /* C4Sky.png in Resources */,
+				ED58D85416BB61490070BD9C /* C4Table.png in Resources */,
+				ED58D85616BB61490070BD9C /* inception.mov in Resources */,
+				ED58D85916BB61490070BD9C /* iTunesArtwork.png in Resources */,
+				ED58D85C16BB614A0070BD9C /* C4Canvas.xib in Resources */,
+				ED58D85E16BB614A0070BD9C /* C4_AppIcon_iPhone.png in Resources */,
+				ED58D86016BB614A0070BD9C /* C4_AppIcon_iPhone@2x.png in Resources */,
+				ED58D86216BB614A0070BD9C /* C4_AppStoreIcon.png in Resources */,
+				ED58D86416BB614A0070BD9C /* C4_AppStoreIcon@2x.png in Resources */,
+				ED58D86616BB614A0070BD9C /* C4_LaunchImage_iPhone.png in Resources */,
+				ED58D86816BB614A0070BD9C /* C4_LaunchImage_iPhone@2x.png in Resources */,
+				ED58D86A16BB614A0070BD9C /* C4_SpotlightIcon.png in Resources */,
+				ED58D86C16BB614A0070BD9C /* C4_SpotlightIcon@2x.png in Resources */,
+				ED58D86E16BB614A0070BD9C /* C4_TabbarIcon.png in Resources */,
+				ED58D87016BB614A0070BD9C /* C4_TabbarIcon@2x.png in Resources */,
+				ED58D87216BB614A0070BD9C /* C4_ToolbarIcon.png in Resources */,
+				ED58D87416BB614A0070BD9C /* C4_ToolbarIcon@2x.png in Resources */,
+				ED8834C816BB778400E915FB /* C4_LaunchImage_iPhone-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED58D7FB16BB61470070BD9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED58D82016BB61470070BD9C /* main.m in Sources */,
+				ED58D82516BB61470070BD9C /* C4AppDelegate.m in Sources */,
+				ED58D82716BB61470070BD9C /* C4WorkSpace.m in Sources */,
+				ED80831C16BB651E0062CA38 /* DropCapView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED58D81C16BB61470070BD9C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED58D81D16BB61470070BD9C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED58D85A16BB614A0070BD9C /* C4Canvas.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED58D85B16BB614A0070BD9C /* en */,
+			);
+			name = C4Canvas.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED58D87516BB614A0070BD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED58D87616BB614A0070BD9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED58D87816BB614A0070BD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropCap/DropCap-Prefix.pch";
+				INFOPLIST_FILE = "DropCap/DropCap-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DropCap/Library\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED58D87916BB614A0070BD9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropCap/DropCap-Prefix.pch";
+				INFOPLIST_FILE = "DropCap/DropCap-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DropCap/Library\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED58D7F916BB61470070BD9C /* Build configuration list for PBXProject "DropCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED58D87516BB614A0070BD9C /* Debug */,
+				ED58D87616BB614A0070BD9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED58D87716BB614A0070BD9C /* Build configuration list for PBXNativeTarget "DropCap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED58D87816BB614A0070BD9C /* Debug */,
+				ED58D87916BB614A0070BD9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED58D7F616BB61470070BD9C /* Project object */;
+}
